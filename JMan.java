@@ -3,6 +3,7 @@ import java.awt.*;
 /**
  * An instance of this class is a J*Man. There should at most one J*Man in a
  * game board at a time
+ * @author Wisarut Boonnumma
  */
 public class JMan extends Piece {
 
@@ -60,20 +61,26 @@ public class JMan extends Piece {
 		// Complete this
 	}
 
+	/**
+	 * check j*man can move next position if can move j*man and eat pillar or walker change color.
+	 * @param x nextPosition x coordinate
+	 * @param y nextPosition y coordinate
+	 * @return true if this JMan can move next position either false.
+	 */
 	public boolean canMove(int x, int y) {
 		Piece colorNext = getMap().pieceAt(x, y);
 		if (getMap().pieceAt(x, y) == null && getMap().isInGrid(x, y))
 			return true;
-		else if (this.getColorWord().equals("YELLOW")
-				&& colorNext.getColorWord().equals("GREEN")) {
+		else if (this.getColor().equals(Color.YELLOW)
+				&& colorNext.getColor().equals(Color.GREEN)) {
 			this.setColor(colorNext.getColor());
 			return true;
-		} else if (this.getColorWord().equals("GREEN")
-				&& colorNext.getColorWord().equals("RED")) {
+		} else if (this.getColor().equals(Color.GREEN)
+				&& colorNext.getColor().equals(Color.RED)) {
 			this.setColor(colorNext.getColor());
 			return true;
-		} else if (this.getColor().equals("RED")
-				&& colorNext.getColorWord().equals("YELLOW")) {
+		} else if (this.getColor().equals(Color.RED)
+				&& colorNext.getColor().equals(Color.YELLOW)) {
 			this.setColor(colorNext.getColor());
 			return true;
 		}

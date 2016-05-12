@@ -3,6 +3,12 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+/**
+ * Map is user interface of piece
+ * 
+ * @author Wisarut Boonnumma
+ *
+ */
 public class Map implements ActionListener {
 	// Window for game with graphics and buttons.
 	public JFrame frame = new JFrame("J*Man!!!"); // The GUI window

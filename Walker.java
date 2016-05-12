@@ -8,8 +8,8 @@ import java.awt.Color;
  */
 public class Walker extends Piece {
 	/**
-	 * Constructor of Walker: a new block at position (x,y) on Map color red if c
-	 * = 0, green if c = 1, and yellow if c = 2..
+	 * Constructor of Walker: a new block at position (x,y) on Map color red if
+	 * c = 0, green if c = 1, and yellow if c = 2..
 	 */
 	public Walker(int x, int y, int c, Map m) {
 		super(Piece.WALKER, m);
